@@ -1,0 +1,145 @@
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ant-divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  font-family: "PingFang SC Semibold";
+
+  .ant-layout-sider {
+    background: #394063;
+  }
+
+  .ant-layout {
+    background: #edf0f8;
+  }
+
+  .ant-menu {
+    color: rgba(255, 255, 255, 0.6);
+    background: #394063;
+
+    .ant-menu-item {
+      a {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+    .ant-menu-sub {
+      background: #394063;
+    }
+  }
+
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: linear-gradient(139deg, #FFAE42 0%, #FF7835 100%);
+  }
+
+}
+
+.light {
+  font-family: PingFangSC-Regular, PingFang SC;
+
+  .ant-layout-sider {
+    background: #fff;
+  }
+
+  .ant-menu {
+    background: #fff;
+
+    .ant-menu-item {
+      color: rgba(0, 0, 0, 0.6);
+
+      a {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      a:hover {
+        color: #1890ff;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background: transparent !important;
+      color: #1890ff;
+
+      .anticon {
+        color: #1890ff;
+      }
+
+      a {
+        color: #1890ff;
+      }
+    }
+
+    .ant-menu-submenu-title {
+      color: rgba(0, 0, 0, 0.6);
+
+      .ant-menu-submenu-expand-icon, .ant-menu-submenu-arrow {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .ant-menu-sub {
+      background: #fafafa;
+    }
+  }
+
+}
+
+.bgc {
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 0px 0px 10px !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.menuSelect {
+  .ant-select-dropdown-menu-item {
+    float: left;
+    width: 45%;
+  }
+}
+
+.ant-btn-link {
+  padding: 0px 5px;
+}
+
+.ant-modal-header {
+  text-align: left;
+}
+
+.ant-input {
+  width: 200px;
+}
