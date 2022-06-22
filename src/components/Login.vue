@@ -79,7 +79,6 @@ export default defineComponent({
         password: value.password
       }
       login(params).then(res => {
-        console.log(res);
         setLocalStorage('access_token',`${res.token_type} ${res.access_token}`)
         this.$router.push({
           path: '/index'
