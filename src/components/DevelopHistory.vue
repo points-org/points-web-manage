@@ -46,7 +46,6 @@ import {
   reactive,
   ref
 } from 'vue';
-import {PlusOutlined} from '@ant-design/icons-vue';
 import {message} from 'ant-design-vue';
 import {addHistory, queryHistory, updateHistory, deleteHistory} from '../serves/index'
 
@@ -79,9 +78,7 @@ const columns = [
   }
 ];
 export default defineComponent({
-  components: {
-    PlusOutlined,
-  },
+  components: {},
   setup() {
     const layout = {
       labelCol: {
@@ -158,7 +155,7 @@ export default defineComponent({
       } else {
         let params = values.user
         params.id = this.id
-        updateHistory(params).then(res => {
+        updateHistory(params).then(() => {
           message.success('修改成功！')
           this.cancel()
           this.pagination.current = 1
@@ -167,7 +164,7 @@ export default defineComponent({
       }
     },
     onDelete(val) {
-      deleteHistory(val.id).then(res => {
+      deleteHistory(val.id).then(() => {
         this.queryData()
       })
     },
