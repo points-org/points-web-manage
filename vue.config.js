@@ -55,7 +55,7 @@ module.exports = defineConfig({
 				target: process.env.VUE_APP_SERVER_URL,
 				changeOrigin: true,
 				pathRewrite: {
-					'^/api': process.env.VUE_APP_SERVER_URL
+					// '^/': 'https://www.guangzhishu.com/api'
 				} // 这里重写路径
 			}
 		}

@@ -229,7 +229,7 @@ export default defineComponent({
   },
   computed: {
     action() {
-      return `${process.env.VUE_APP_SERVER_URL}/uploadfile/`
+      return `${process.env.VUE_APP_SERVER_URL}/api/uploadfile/`
     },
     headers() {
       return {Authorization: getLocalStorage('access_token')}
