@@ -57,7 +57,7 @@
           <a-upload
               v-model:file-list="fileList"
               name="in_file"
-              action="http://192.168.51.155:18000/uploadfile/"
+              :action="action"
               list-type="picture-card"
               :headers="headers"
               @change="uploadChange"
@@ -88,7 +88,7 @@ import {
 } from 'vue';
 import {PlusOutlined} from '@ant-design/icons-vue';
 import {message} from 'ant-design-vue';
-import {addNews, queryNews, updateNews, deleteNews, updateHistory} from '../serves/index'
+import {addNews, queryNews, updateNews, deleteNews} from '../serves/index'
 import {getLocalStorage} from "@/serves/localStorage";
 
 function getBase64(file) {
@@ -228,13 +228,15 @@ export default defineComponent({
     };
   },
   computed: {
+    action() {
+      return `${process.env.VUE_APP_SERVER_URL}/uploadfile/`
+    },
     headers() {
       return {Authorization: getLocalStorage('access_token')}
     },
   },
   mounted() {
     this.queryData()
-
   },
   methods: {
     queryData() {
